@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assistance Meterbook · Meterbook</title>
+    <meta name="description" content="Réponses sur les compteurs et les relevés, l’offre gratuite, l’import, les sauvegardes et leur restauration, le déverrouillage unique, la restauration d’un achat, l’export et la suppression des données.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/support/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/support/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Langue">Français</summary>
+        <ul>
+            <li><a href="../../support/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/support/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="./" hreflang="fr" lang="fr" aria-current="page">Français</a></li>
+            <li><a href="../../es/support/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/support/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../../pt-br/support/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="../../nl/support/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="../../pl/support/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="../../ru/support/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Assistance Meterbook</h1>
+<p class="lead">Vos relevés de compteurs : photo, index et date sur une seule fiche.</p>
+<p><strong>Besoin d’aide ?</strong> Écrivez à <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>. MacLaren's Studio répond généralement sous deux jours ouvrés. Astuce : Plus › Contacter l’assistance dans l’app ajoute à l’e-mail la version de l’app, la version d’iOS et votre appareil.</p>
+<a class="button" href="mailto:ssx51f@gmail.com?subject=Assistance%20Meterbook">Écrire à l’assistance</a>
+</section>
+<section>
+<h2>Questions fréquentes</h2>
+<div class="card">
+<h3>Comment ajouter un compteur et un relevé ?</h3>
+<p>Dans l’onglet Compteurs, touchez <strong>Ajouter un compteur</strong>, donnez-lui un nom et un type (électricité, gaz, eau ou chauffage), puis enregistrez. Ouvrez le compteur et touchez <strong>Saisir un relevé</strong> : le dernier relevé s’affiche au-dessus de la saisie, vous ne tapez donc que les chiffres qui ont changé. Si vous le souhaitez, ajoutez une photo du compteur comme preuve. Un index inférieur au dernier relevé est bloqué ; si le compteur a été remplacé, choisissez plutôt <strong>remplacement du compteur</strong>.</p>
+</div>
+<div class="card">
+<h3>Qu’est-ce qui est gratuit et qu’apporte le déverrouillage ?</h3>
+<p>Gratuit pour toujours : jusqu’à trois compteurs actifs, chacun avec autant de registres que nécessaire (un compteur bidirectionnel ou heures pleines/heures creuses compte pour un seul compteur), avec tout l’historique, les photos, les tarifs, la prévision de l’année de facturation, les rappels, l’import, l’export et les sauvegardes. Les compteurs archivés conservent leur historique et ne sont pas comptés. Le <strong>Déverrouillage complet</strong>, un achat unique, ajoute des compteurs illimités, plusieurs logements, des sous-compteurs et des compteurs virtuels. Rien de ce que vous avez saisi ou exporté n’est jamais verrouillé. Il n’y a ni abonnement ni publicité ; l’App Store affiche le prix dans votre devise avant l’achat.</p>
+</div>
+<div class="card">
+<h3>Comment importer mes anciens relevés ?</h3>
+<p>Dans l’onglet Importer, touchez <strong>Importer un fichier CSV ou Excel</strong> et choisissez un tableur avec une date et un index par ligne (et le compteur, si le fichier en contient plusieurs). Meterbook reconnaît les colonnes et le format de date, affiche un aperçu avec le nombre de compteurs et de relevés, puis importe chaque ligne. L’offre gratuite n’interrompt jamais un import : si le fichier apporte plus de trois compteurs, ils sont tous importés, et vous pouvez ensuite en archiver certains ou déverrouiller l’app.</p>
+</div>
+<div class="card">
+<h3>Où sont mes sauvegardes ?</h3>
+<p>Meterbook effectue une sauvegarde sur votre iPhone chaque jour où vous enregistrez un relevé, ainsi qu’avant un import, une restauration ou la suppression d’un compteur ; les dix dernières versions automatiques sont conservées. Touchez <strong>Sauvegarder maintenant</strong> dans Plus › Sauvegardes pour créer votre propre version, qui n’est jamais supprimée automatiquement. <strong>Partager le fichier de sauvegarde</strong> enregistre une version dans Fichiers, sur un ordinateur ou sur un autre appareil.</p>
+</div>
+<div class="card">
+<h3>Comment restaurer une sauvegarde ?</h3>
+<p>Choisissez une version dans Plus › Sauvegardes et touchez <strong>Restaurer</strong>, ou ouvrez un fichier de sauvegarde via l’onglet Importer › <strong>Restaurer une sauvegarde Meterbook</strong>. Un aperçu vous montre d’abord ce qui sera ajouté. La restauration fusionne toujours avec vos données : rien n’est supprimé ni écrasé, et vos données sont sauvegardées automatiquement avant la fusion.</p>
+</div>
+<div class="card">
+<h3>Comment restaurer mon achat sur un nouvel iPhone ?</h3>
+<p>Connectez-vous avec le compte Apple qui a servi à acheter le déverrouillage, puis touchez <strong>Restaurer les achats</strong> dans Plus › Achat ou sur l’écran de déverrouillage. L’achat est lié à votre compte Apple : il fonctionne donc sur chaque iPhone que vous utilisez avec ce compte.</p>
+</div>
+<div class="card">
+<h3>Comment exporter mes relevés ?</h3>
+<p>Sur l’écran d’un compteur, le menu <strong>Exporter</strong> partage ses relevés sous forme de fichier CSV ou de rapport PDF avec la prévision et son calcul, ou bien le dernier relevé en texte. L’onglet Importer › Exporter fournit un seul fichier CSV de tous les compteurs, ainsi que l’état des lieux des compteurs pour un emménagement ou un déménagement. Le CSV s’ouvre dans Numbers, Excel et Google Sheets ; les PDF sont dans la langue de l’app.</p>
+</div>
+<div class="card">
+<h3>Pourquoi la prévision ne correspond-elle pas à ma facture ?</h3>
+<p>La prévision répartit vos relevés sur l’année de facturation qui commence à la date de clôture de votre fournisseur, puis ajoute l’abonnement et les mensualités de votre tarif. Avec peu de relevés, elle repose surtout sur une estimation, et la fourchette indique de combien elle peut encore varier. <strong>Afficher le calcul</strong> détaille chaque étape et la période derrière chaque chiffre, pour que vous puissiez la comparer ligne par ligne avec votre facture.</p>
+</div>
+<div class="card">
+<h3>Comment supprimer mes données ?</h3>
+<p>Supprimez un relevé depuis l’écran de son compteur et un compteur dans son éditeur (Modifier › <strong>Supprimer le compteur</strong>), ou utilisez Plus › <strong>Supprimer toutes les données</strong> pour effacer d’un coup tous les compteurs, relevés et photos (une sauvegarde est d’abord effectuée, et les sauvegardes restent jusqu’à ce que vous les supprimiez dans Plus › Sauvegardes). Supprimer l’app efface toutes ses données de votre iPhone, sauvegardes comprises. Nous n’en détenons aucune copie, car rien ne nous est jamais envoyé.</p>
+</div>
+<div class="card">
+<h3>Quels appareils et quelles langues sont pris en charge ?</h3>
+<p>Meterbook fonctionne sur iPhone avec iOS 18 ou version ultérieure, en anglais, allemand, français, espagnol, italien, portugais du Brésil, néerlandais, polonais et russe. L’app fonctionne entièrement hors connexion.</p>
+</div>
+</section>
+</main>
+<footer class="wrap">
+    <nav><a href="./">Assistance</a> <a href="../privacy/">Politique de confidentialité</a> <a href="../terms/">Conditions d’utilisation</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Tous droits réservés.</p>
+</footer>
+</body>
+</html>

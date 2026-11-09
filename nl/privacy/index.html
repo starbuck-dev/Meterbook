@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacybeleid · Meterbook</title>
+    <meta name="description" content="Meterbook verzamelt geen gegevens: geen account, geen server, geen analyse, geen tracking. Je meterstanden en foto&#x27;s van meters blijven op je iPhone.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/nl/privacy/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/privacy/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/privacy/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/privacy/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/privacy/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/privacy/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/privacy/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/privacy/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/privacy/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/privacy/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/privacy/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Taal">Nederlands</summary>
+        <ul>
+            <li><a href="../../privacy/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/privacy/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../../fr/privacy/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../../es/privacy/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/privacy/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../../pt-br/privacy/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="./" hreflang="nl" lang="nl" aria-current="page">Nederlands</a></li>
+            <li><a href="../../pl/privacy/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="../../ru/privacy/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<article class="card">
+<h1>Privacybeleid</h1>
+<p class="date">Ingangsdatum: 9 november 2026</p>
+<div class="summary"><p><strong>Samenvatting:</strong> Meterbook verzamelt geen gegevens. Er is geen account, geen server van ons, geen analyse, geen advertenties en geen tracking. Je meterstanden en foto's van meters blijven op je iPhone, de camera wordt alleen gebruikt voor de foto van de meter, en bestanden die je exporteert gaan alleen naar waar jij ze stuurt.</p></div>
+<section>
+<h2>1. Wie we zijn</h2>
+<p>Meterbook is een iPhone-app van MacLaren's Studio (“wij”).</p>
+</section>
+<section>
+<h2>2. Gegevens die we niet verzamelen</h2>
+<p>We verzamelen, ontvangen en bewaren via de app geen persoonsgegevens. Meterbook heeft geen inlog en geen account, we draaien er geen server voor en de app bevat geen analyse, crashrapportage, advertenties of andere SDK's van derden. De app volgt je niet via andere apps of websites, gebruikt de advertentie-ID niet en vraagt nooit om toestemming voor tracking.</p>
+</section>
+<section>
+<h2>3. Je meterstanden</h2>
+<p>Alles wat je invoert (meters, meternummers, meterstanden, notities, tarieven en woningen) wordt alleen op je iPhone bewaard, in de eigen opslag van de app. Een paar instellingen, zoals je opnamedag en het tijdstip van de herinnering, staan in de voorkeuren van de app op het apparaat. Wij kunnen hier niets van zien, lezen of herstellen.</p>
+<p>Net als andere appgegevens zitten je meterstanden en foto's in de reservekopieën van je iPhone als je iCloud-reservekopie gebruikt of een reservekopie op je computer maakt. Die reservekopieën horen bij je Apple Account of je computer, en wij hebben er geen toegang toe. Meterbook synchroniseert je gegevens niet tussen apparaten.</p>
+</section>
+<section>
+<h2>4. Camera en foto&#x27;s</h2>
+<p>De camera wordt alleen gebruikt als je bij een meterstand een foto van je meter maakt, en dat is optioneel: een meterstand wordt ook zonder foto bewaard. Foto's worden met je meterstanden op je iPhone bewaard en nooit geüpload. Als je een afbeelding uit je fotobibliotheek kiest, geeft de systeemkiezer de app alleen die afbeelding. Een foto van een meter komt alleen in je fotobibliotheek als je hem daar zelf bewaart.</p>
+</section>
+<section>
+<h2>5. Herinneringen en widget</h2>
+<p>Herinneringen op je opnamedag zijn lokale meldingen die op je iPhone worden ingepland; de app vraagt pas om toestemming als je ze inschakelt, en er gaat niets via een server. De widget Volgende opname leest de datums en laatste meterstanden uit een bestand dat de app in een gedeelde map op je iPhone bijhoudt; dat bestand verlaat het apparaat nooit.</p>
+</section>
+<section>
+<h2>6. Reservekopieën en exports</h2>
+<p>De reservekopieën die Meterbook maakt, zijn bestanden op je iPhone. Als je een reservekopiebestand deelt of een CSV-bestand, een pdf of een meterstand als tekst exporteert, wordt het bestand op je iPhone aangemaakt en gaat het alleen naar waar jij het met het deelmenu naartoe stuurt (Mail, Berichten, Bestanden, AirDrop of een andere app). Die overdracht wordt afgehandeld door Apple of door de app die je kiest, niet door ons.</p>
+</section>
+<section>
+<h2>7. Aankopen</h2>
+<p>De optionele aankoop Alles ontgrendelen koop je via de App Store. Apple verwerkt de betaling; wij zien nooit je naam, je Apple Account of je betaalgegevens. De app vraagt de App Store alleen of de ontgrendeling op je Apple Account is gekocht. Hoe Apple met deze gegevens omgaat, staat in het <a href="https://www.apple.com/legal/privacy/">privacybeleid van Apple</a>.</p>
+</section>
+<section>
+<h2>8. Beoordelingen</h2>
+<p>Af en toe kan de app de standaardvraag van Apple om een beoordeling tonen. Of en hoe je beoordeelt, wordt volledig door Apple afgehandeld; de app houdt op je iPhone alleen bij hoeveel meterstanden je hebt bewaard en wanneer de app het laatst heeft gevraagd.</p>
+</section>
+<section>
+<h2>9. E-mails aan support</h2>
+<p>Als je ons schrijft, ontvangen we je e-mailadres en wat je stuurt, inclusief de appversie, iOS-versie en het apparaat die de supportmail in de app toevoegt. We gebruiken dit alleen om je te antwoorden, delen het niet en verwijderen het zodra het niet meer nodig is voor je vraag. De rechtsgrond is art. 6, lid 1, onder b en f AVG.</p>
+</section>
+<section>
+<h2>10. Je gegevens wissen</h2>
+<p>Je kunt losse meterstanden en meters verwijderen, alle meters met Meer › Wis alle gegevens, en versies van reservekopieën in Meer › Reservekopieën. Als je de app verwijdert, worden alle gegevens van de app van je iPhone gewist. Omdat wij geen gegevens over jou hebben, valt er op verzoek niets te exporteren of te verwijderen, behalve e-mails die je ons hebt gestuurd.</p>
+</section>
+<section>
+<h2>11. Kinderen</h2>
+<p>Meterbook is geschikt voor alle leeftijden en verzamelt van niemand gegevens, ook niet van kinderen.</p>
+</section>
+<section>
+<h2>12. Je rechten</h2>
+<p>Op grond van de AVG en vergelijkbare wetten heb je het recht om persoonsgegevens over jou in te zien, te corrigeren en te laten verwijderen, en om een klacht in te dienen bij een toezichthouder voor gegevensbescherming. Omdat de app geen gegevens verzamelt, gaan deze rechten alleen over e-mails die je ons hebt gestuurd; schrijf naar <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>.</p>
+</section>
+<section>
+<h2>13. Wijzigingen</h2>
+<p>Als dit beleid verandert, wordt de nieuwe versie op deze pagina gepubliceerd met een nieuwe ingangsdatum. Mocht de app ooit gegevens gaan verzamelen, dan staat dat in het beleid voordat die versie verschijnt.</p>
+</section>
+<section>
+<h2>14. Contact</h2>
+<p>Heb je vragen over dit privacybeleid, schrijf dan naar <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>.</p>
+</section>
+</article>
+</main>
+<footer class="wrap">
+    <nav><a href="../support/">Support</a> <a href="./">Privacybeleid</a> <a href="../terms/">Gebruiksvoorwaarden</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Alle rechten voorbehouden.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meterbook · Журнал показаний счётчиков для iPhone</title>
+    <meta name="description" content="Meterbook — приложение для iPhone для показаний счётчиков электричества, газа, воды и тепла: фото, число и дата на одной карточке. Поддержка, политика конфиденциальности и условия использования.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/ru/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="./">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Язык">Русский</summary>
+        <ul>
+            <li><a href="../" hreflang="en" lang="en">English</a></li>
+            <li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../es/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../it/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="../nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="./" hreflang="ru" lang="ru" aria-current="page">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Ваши показания счётчиков: фото, число и дата на одной карточке.</h1>
+<p>Meterbook сохраняет каждое показание счётчиков электричества, газа, воды и тепла как карточку с фото счётчика, числом и датой. Под ней — расход в день, стоимость по вашему тарифу и прогноз на расчётный год с полным расчётом. Без аккаунта, без сервера, без рекламы: показания остаются на вашем iPhone.</p>
+</section>
+<nav class="links">
+    <a href="support/"><strong>Поддержка</strong><span>Вопросы, ответы и как с нами связаться</span></a>
+    <a href="privacy/"><strong>Политика конфиденциальности</strong><span>Meterbook не собирает никаких данных</span></a>
+    <a href="terms/"><strong>Условия использования</strong><span>Стандартная лицензия Apple и разовая покупка</span></a>
+</nav>
+</main>
+<footer class="wrap">
+    <nav><a href="support/">Поддержка</a> <a href="privacy/">Политика конфиденциальности</a> <a href="terms/">Условия использования</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Все права защищены.</p>
+</footer>
+</body>
+</html>

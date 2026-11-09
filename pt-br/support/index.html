@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suporte do Meterbook · Meterbook</title>
+    <meta name="description" content="Respostas sobre medidores e leituras, o plano gratuito, importação, backups e restauração, o desbloqueio único, a restauração de uma compra, exportação e exclusão de dados.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/support/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/support/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Idioma">Português (Brasil)</summary>
+        <ul>
+            <li><a href="../../support/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/support/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../../fr/support/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../../es/support/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/support/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="./" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português (Brasil)</a></li>
+            <li><a href="../../nl/support/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="../../pl/support/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="../../ru/support/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Suporte do Meterbook</h1>
+<p class="lead">Suas leituras de medidores: foto, número e data em um só cartão.</p>
+<p><strong>Precisa de ajuda?</strong> Escreva para <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>. MacLaren's Studio costuma responder em até dois dias úteis. Dica: Mais › Contatar o suporte, no app, adiciona ao e-mail a versão do app, a versão do iOS e o aparelho.</p>
+<a class="button" href="mailto:ssx51f@gmail.com?subject=Suporte%20do%20Meterbook">Enviar e-mail ao suporte</a>
+</section>
+<section>
+<h2>Perguntas frequentes</h2>
+<div class="card">
+<h3>Como adiciono um medidor e uma leitura?</h3>
+<p>Na aba Medidores, toque em <strong>Adicionar medidor</strong>, dê a ele um nome e um tipo (energia elétrica, gás, água ou aquecimento) e salve. Abra o medidor e toque em <strong>Registrar leitura</strong>: a última leitura aparece acima da entrada, então você só digita os dígitos que mudaram. Se quiser, adicione uma foto do medidor como comprovante. Um valor menor que a última leitura é bloqueado; se o medidor foi trocado, escolha <strong>troca de medidor</strong>.</p>
+</div>
+<div class="card">
+<h3>O que é grátis e o que o desbloqueio adiciona?</h3>
+<p>Grátis para sempre: até três medidores ativos, cada um com quantos registros você quiser (um medidor bidirecional ou com ponta e fora de ponta conta como um só medidor), com todo o histórico, fotos, tarifas, a previsão do ano de faturamento, lembretes, importação, exportação e backups. Medidores arquivados mantêm o histórico e não contam. O <strong>Desbloqueio completo</strong>, uma compra única, adiciona medidores ilimitados, vários imóveis, submedidores e medidores virtuais. Nada do que você inseriu ou exportou fica bloqueado, nunca. Não há assinatura nem anúncios; a App Store mostra o preço na sua moeda antes da compra.</p>
+</div>
+<div class="card">
+<h3>Como importo minhas leituras antigas?</h3>
+<p>Na aba Importar, toque em <strong>Importar arquivo CSV ou Excel</strong> e escolha uma planilha com uma data e uma leitura por linha (e o medidor, se o arquivo tiver vários). O Meterbook detecta as colunas e o formato de data, mostra uma prévia com o número de medidores e leituras e importa todas as linhas. O plano gratuito nunca corta uma importação pela metade: se o arquivo trouxer mais de três medidores, todos entram, e você pode arquivar alguns deles ou fazer o desbloqueio.</p>
+</div>
+<div class="card">
+<h3>Onde ficam meus backups?</h3>
+<p>O Meterbook faz um backup no seu iPhone em cada dia em que você salva uma leitura, e também antes de uma importação, de uma restauração ou da exclusão de um medidor; as dez últimas versões automáticas são mantidas. Toque em <strong>Fazer backup agora</strong> em Mais › Backups para criar uma versão sua, que nunca é removida automaticamente. <strong>Compartilhar arquivo de backup</strong> salva uma versão no app Arquivos, em um computador ou em outro aparelho.</p>
+</div>
+<div class="card">
+<h3>Como restauro um backup?</h3>
+<p>Escolha uma versão em Mais › Backups e toque em <strong>Restaurar</strong>, ou abra um arquivo de backup pela aba Importar › <strong>Restaurar um backup do Meterbook</strong>. Primeiro você vê uma prévia do que será adicionado. A restauração sempre mescla com os seus dados: nada é apagado nem sobrescrito, e é feito um backup automático dos seus dados antes da mesclagem.</p>
+</div>
+<div class="card">
+<h3>Como restauro minha compra em um novo iPhone?</h3>
+<p>Entre com a Conta Apple usada para comprar o desbloqueio e toque em <strong>Restaurar compras</strong> em Mais › Compra ou na tela de desbloqueio. A compra pertence à sua Conta Apple, então funciona em todos os iPhones em que você a usa.</p>
+</div>
+<div class="card">
+<h3>Como exporto minhas leituras?</h3>
+<p>Na tela de um medidor, o menu <strong>Exportar</strong> compartilha as leituras dele como arquivo CSV, como relatório PDF com a previsão e o cálculo, ou a última leitura como texto. Pela aba Importar › Exportar, você obtém um único arquivo CSV com todos os medidores e o termo de entrega para quando você se muda para um imóvel ou sai dele. O CSV abre no Numbers, no Excel e no Google Sheets; os PDFs ficam no idioma do app.</p>
+</div>
+<div class="card">
+<h3>Por que a previsão não bate com a minha conta?</h3>
+<p>A previsão distribui suas leituras pelo ano de faturamento que começa na data de fechamento da sua distribuidora e acrescenta a taxa fixa e as parcelas mensais da sua tarifa. Com poucas leituras, ela se baseia principalmente em uma estimativa, e a faixa mostra o quanto ela ainda pode variar. <strong>Ver cálculo</strong> lista cada passo e o período por trás de cada número, para você comparar linha por linha com a sua conta.</p>
+</div>
+<div class="card">
+<h3>Como apago meus dados?</h3>
+<p>Apague uma leitura na tela do medidor dela e um medidor no editor dele (Editar › <strong>Apagar medidor</strong>), ou use Mais › <strong>Apagar todos os dados</strong> para remover de uma vez todos os medidores, leituras e fotos (antes é feito um backup, e os backups ficam até você apagá-los em Mais › Backups). Apagar o app remove do seu iPhone todos os dados dele, inclusive os backups. Não temos nenhuma cópia, porque nada nunca é enviado para nós.</p>
+</div>
+<div class="card">
+<h3>Quais aparelhos e idiomas são compatíveis?</h3>
+<p>O Meterbook funciona no iPhone com iOS 18 ou posterior, em inglês, alemão, francês, espanhol, italiano, português do Brasil, holandês, polonês e russo. Ele funciona totalmente offline.</p>
+</div>
+</section>
+</main>
+<footer class="wrap">
+    <nav><a href="./">Suporte</a> <a href="../privacy/">Política de Privacidade</a> <a href="../terms/">Termos de Uso</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

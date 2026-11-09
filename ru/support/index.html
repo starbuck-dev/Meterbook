@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Поддержка Meterbook · Meterbook</title>
+    <meta name="description" content="Ответы о счётчиках и показаниях, бесплатной версии, импорте, резервных копиях и восстановлении, разовой покупке, восстановлении покупки, экспорте и удалении данных.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/support/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/support/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Язык">Русский</summary>
+        <ul>
+            <li><a href="../../support/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/support/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../../fr/support/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../../es/support/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/support/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../../pt-br/support/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="../../nl/support/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="../../pl/support/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="./" hreflang="ru" lang="ru" aria-current="page">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Поддержка Meterbook</h1>
+<p class="lead">Ваши показания счётчиков: фото, число и дата на одной карточке.</p>
+<p><strong>Нужна помощь?</strong> Напишите на <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>. MacLaren's Studio обычно отвечает в течение двух рабочих дней. Совет: если написать через «Ещё › Написать в поддержку» в приложении, в письмо добавятся версия приложения, версия iOS и модель устройства.</p>
+<a class="button" href="mailto:ssx51f@gmail.com?subject=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20Meterbook">Написать в поддержку</a>
+</section>
+<section>
+<h2>Частые вопросы</h2>
+<div class="card">
+<h3>Как добавить счётчик и показание?</h3>
+<p>На вкладке «Счётчики» нажмите <strong>Добавить счётчик</strong>, укажите название и тип (электричество, газ, вода или отопление) и сохраните. Откройте счётчик и нажмите <strong>Внести показание</strong>: последнее показание видно над полем ввода, поэтому достаточно набрать только изменившиеся цифры. При желании добавьте фото счётчика как подтверждение. Значение меньше последнего показания блокируется; если счётчик заменили, выберите вместо этого действие <strong>Замена счётчика</strong>.</p>
+</div>
+<div class="card">
+<h3>Что бесплатно и что добавляет полная версия?</h3>
+<p>Бесплатно и навсегда: до трёх активных счётчиков, у каждого — любое число регистров (двунаправленный или двухтарифный счётчик считается одним), со всей историей, фото, тарифами, прогнозом расчётного года, напоминаниями, импортом, экспортом и резервными копиями. Архивные счётчики сохраняют историю и в лимит не входят. Разовая покупка <strong>Полная версия</strong> добавляет неограниченное число счётчиков, несколько объектов, субсчётчики и виртуальные счётчики. Ничто из того, что вы ввели или экспортировали, никогда не блокируется. Подписки и рекламы нет; цену в вашей валюте App Store покажет до покупки.</p>
+</div>
+<div class="card">
+<h3>Как импортировать старые показания?</h3>
+<p>На вкладке «Импорт» нажмите <strong>Импорт файла CSV или Excel</strong> и выберите таблицу, где в каждой строке есть дата и показание (и счётчик, если в файле их несколько). Meterbook распознаёт колонки и формат даты, показывает предпросмотр с числом счётчиков и показаний и импортирует каждую строку. Бесплатная версия никогда не обрывает импорт: если в файле больше трёх счётчиков, переносятся все, а затем часть из них можно отправить в архив или разблокировать приложение.</p>
+</div>
+<div class="card">
+<h3>Где хранятся резервные копии?</h3>
+<p>Meterbook создаёт резервную копию на вашем iPhone в каждый день, когда вы сохраняете показание, а также перед импортом, восстановлением или удалением счётчика; хранятся десять последних автоматических версий. Нажмите <strong>Создать копию</strong> в разделе «Ещё › Резервные копии», чтобы сохранить собственную версию, — она никогда не удаляется автоматически. <strong>Поделиться файлом копии</strong> сохраняет версию в приложение «Файлы», на компьютер или на другое устройство.</p>
+</div>
+<div class="card">
+<h3>Как восстановить резервную копию?</h3>
+<p>Выберите версию в разделе «Ещё › Резервные копии» и нажмите <strong>Восстановить</strong> или откройте файл копии через вкладку «Импорт» › <strong>Восстановить копию Meterbook</strong>. Сначала вы увидите предпросмотр того, что будет добавлено. Восстановление всегда объединяет копию с вашими данными: ничего не удаляется и не перезаписывается, а перед объединением данные автоматически сохраняются в резервную копию.</p>
+</div>
+<div class="card">
+<h3>Как восстановить покупку на новом iPhone?</h3>
+<p>Войдите в тот аккаунт Apple, с которым была куплена полная версия, и нажмите <strong>Восстановить покупки</strong> в разделе «Ещё › Покупка» или на экране полной версии. Покупка привязана к вашему аккаунту Apple, поэтому работает на любом iPhone, где вы используете этот аккаунт.</p>
+</div>
+<div class="card">
+<h3>Как экспортировать показания?</h3>
+<p>На экране счётчика меню <strong>Экспорт</strong> отправляет его показания файлом CSV, PDF-отчётом с прогнозом и расчётом или последнее показание текстом. Вкладка «Импорт» › «Экспорт» даёт один файл CSV по всем счётчикам и акт приёма-передачи для въезда или выезда. CSV открывается в Numbers, Excel и Google Sheets; PDF-файлы составляются на языке приложения.</p>
+</div>
+<div class="card">
+<h3>Почему прогноз не совпадает с моим счётом?</h3>
+<p>Прогноз распределяет ваши показания на расчётный год, который начинается с даты расчёта поставщика, и добавляет абонентскую плату и ежемесячные платежи по вашему тарифу. Когда показаний мало, он опирается в основном на оценку, а диапазон показывает, насколько он может сдвинуться. <strong>Показать расчёт</strong> перечисляет каждый шаг и период за каждой цифрой, так что прогноз можно построчно сверить со счётом.</p>
+</div>
+<div class="card">
+<h3>Как удалить свои данные?</h3>
+<p>Показание удаляется на экране его счётчика, счётчик — в его редакторе («Изменить» › <strong>Удалить счётчик</strong>), а через «Ещё» › <strong>Удалить все данные</strong> можно сразу удалить все счётчики, показания и фото (перед этим создаётся резервная копия, а копии остаются, пока вы не удалите их в разделе «Ещё › Резервные копии»). При удалении приложения с iPhone удаляются все его данные, включая резервные копии. У нас нет копии ваших данных, потому что нам ничего не отправляется.</p>
+</div>
+<div class="card">
+<h3>Какие устройства и языки поддерживаются?</h3>
+<p>Meterbook работает на iPhone с iOS 18 или новее на английском, немецком, французском, испанском, итальянском, бразильском португальском, нидерландском, польском и русском языках. Приложение полностью работает без интернета.</p>
+</div>
+</section>
+</main>
+<footer class="wrap">
+    <nav><a href="./">Поддержка</a> <a href="../privacy/">Политика конфиденциальности</a> <a href="../terms/">Условия использования</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Все права защищены.</p>
+</footer>
+</body>
+</html>

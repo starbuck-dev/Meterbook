@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meterbook Support · Meterbook</title>
+    <meta name="description" content="Answers about meters and readings, the free tier, importing, backups and restoring, the one-time unlock, restoring a purchase, exporting and deleting data.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/support/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/support/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Language">English</summary>
+        <ul>
+            <li><a href="./" hreflang="en" lang="en" aria-current="page">English</a></li>
+            <li><a href="../de/support/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../fr/support/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../es/support/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../it/support/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../pt-br/support/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="../nl/support/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="../pl/support/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="../ru/support/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Meterbook Support</h1>
+<p class="lead">Your meter readings: photo, number and date on one card.</p>
+<p><strong>Need help?</strong> Write to <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>. MacLaren's Studio usually answers within two working days. Tip: More › Contact Support in the app adds your app version, iOS version and device to the email.</p>
+<a class="button" href="mailto:ssx51f@gmail.com?subject=Meterbook%20Support">Email Support</a>
+</section>
+<section>
+<h2>Frequently asked questions</h2>
+<div class="card">
+<h3>How do I add a meter and a reading?</h3>
+<p>On the Meters tab, tap <strong>Add Meter</strong>, give it a name and a type (electricity, gas, water or heat) and save. Open the meter and tap <strong>Enter Reading</strong>: the last reading is shown above the input, so you only type the digits that changed. Add a photo of the meter as proof if you like. A value below the last reading is blocked; if the meter was replaced, choose <strong>meter replacement</strong> instead.</p>
+</div>
+<div class="card">
+<h3>What is free and what does the unlock add?</h3>
+<p>Free, for good: up to three active meters, each with any number of registers (a two-way or dual-rate meter counts as one meter), with all history, photos, tariffs, the billing-year forecast, reminders, import, export and backups. Archived meters keep their history and don't count. The one-time <strong>Lifetime Unlock</strong> adds unlimited meters, several properties, sub-meters and virtual meters. Nothing you entered or exported is ever locked. There is no subscription and no ads; the App Store shows the price in your currency before you buy.</p>
+</div>
+<div class="card">
+<h3>How do I import my old readings?</h3>
+<p>On the Import tab, tap <strong>Import a CSV or Excel file</strong> and choose a spreadsheet with a date and a reading per row (and the meter, if the file holds several). Meterbook detects the columns and the date format, shows a preview with the number of meters and readings, and imports every row. The free tier never cuts an import short: if the file brings more than three meters, all of them come in, and you can archive some of them or unlock.</p>
+</div>
+<div class="card">
+<h3>Where are my backups?</h3>
+<p>Meterbook makes a backup on your iPhone every day you save a reading, and before an import, a restore or the deletion of a meter; the last ten automatic versions are kept. Tap <strong>Back Up Now</strong> in More › Backups for a version of your own, which is never removed automatically. <strong>Share Backup File</strong> saves a version to Files, a computer or another device.</p>
+</div>
+<div class="card">
+<h3>How do I restore a backup?</h3>
+<p>Choose a version in More › Backups and tap <strong>Restore</strong>, or open a backup file with Import tab › <strong>Restore a Meterbook backup</strong>. You first see a preview of what will be added. Restoring always merges into your data: nothing is deleted or overwritten, and your data is backed up automatically before the merge.</p>
+</div>
+<div class="card">
+<h3>How do I restore my purchase on a new iPhone?</h3>
+<p>Sign in with the Apple Account you bought the unlock with, then tap <strong>Restore Purchases</strong> in More › Purchase or on the unlock screen. The purchase belongs to your Apple Account, so it works on every iPhone you use with it.</p>
+</div>
+<div class="card">
+<h3>How do I export my readings?</h3>
+<p>On a meter's screen, the <strong>Export</strong> menu shares its readings as a CSV file, a PDF report with the forecast and its calculation, or the last reading as text. Import tab › Export gives one CSV file of all meters and the handover protocol for moving in or out. CSV opens in Numbers, Excel and Google Sheets; the PDFs are in the app's language.</p>
+</div>
+<div class="card">
+<h3>Why doesn&#x27;t the forecast match my bill?</h3>
+<p>The forecast spreads your readings over the billing year that starts on your supplier's cut-off date and adds the standing charge and the monthly payments of your tariff. With few readings it rests mostly on an estimate, and the range shows how far it may move. <strong>Show calculation</strong> lists every step and the period behind each number, so you can compare it line by line with your bill.</p>
+</div>
+<div class="card">
+<h3>How do I delete my data?</h3>
+<p>Delete a reading from its meter's screen and a meter in its editor (Edit › <strong>Delete Meter</strong>), or use More › <strong>Delete All Data</strong> to remove every meter, reading and photo at once (a backup is made first, and the backups stay until you delete them in More › Backups). Deleting the app removes all of its data, backups included, from your iPhone. We hold no copy, because nothing is ever sent to us.</p>
+</div>
+<div class="card">
+<h3>Which devices and languages are supported?</h3>
+<p>Meterbook runs on iPhone with iOS 18 or later, in English, German, French, Spanish, Italian, Brazilian Portuguese, Dutch, Polish and Russian. It works fully offline.</p>
+</div>
+</section>
+</main>
+<footer class="wrap">
+    <nav><a href="./">Support</a> <a href="../privacy/">Privacy Policy</a> <a href="../terms/">Terms of Use</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. All rights reserved.</p>
+</footer>
+</body>
+</html>

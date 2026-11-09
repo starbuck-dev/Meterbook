@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meterbook Support · Meterbook</title>
+    <meta name="description" content="Antwoorden over meters en meterstanden, de gratis versie, importeren, reservekopieën en herstellen, de eenmalige ontgrendeling, een aankoop herstellen, exporteren en gegevens wissen.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/support/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/support/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Taal">Nederlands</summary>
+        <ul>
+            <li><a href="../../support/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/support/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../../fr/support/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../../es/support/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/support/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../../pt-br/support/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="./" hreflang="nl" lang="nl" aria-current="page">Nederlands</a></li>
+            <li><a href="../../pl/support/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="../../ru/support/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Meterbook Support</h1>
+<p class="lead">Je meterstanden: foto, getal en datum op één kaart.</p>
+<p><strong>Hulp nodig?</strong> Schrijf naar <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>. MacLaren's Studio antwoordt meestal binnen twee werkdagen. Tip: via Meer › Contact met support in de app worden je appversie, iOS-versie en apparaat aan de e-mail toegevoegd.</p>
+<a class="button" href="mailto:ssx51f@gmail.com?subject=Meterbook-support">E-mail support</a>
+</section>
+<section>
+<h2>Veelgestelde vragen</h2>
+<div class="card">
+<h3>Hoe voeg ik een meter en een meterstand toe?</h3>
+<p>Tik in de tab Meters op <strong>Voeg meter toe</strong>, geef de meter een naam en een type (stroom, gas, water of warmte) en bewaar. Open de meter en tik op <strong>Voer meterstand in</strong>: de laatste meterstand staat boven de invoer, zodat je alleen de cijfers typt die veranderd zijn. Voeg als bewijs eventueel een foto van de meter toe. Een waarde lager dan de laatste meterstand wordt geblokkeerd; is de meter vervangen, kies dan <strong>Meterwissel</strong>.</p>
+</div>
+<div class="card">
+<h3>Wat is gratis en wat voegt de ontgrendeling toe?</h3>
+<p>Gratis, voor altijd: maximaal drie actieve meters, elk met zoveel telwerken als je wilt (een tweerichtingsmeter of een meter met normaal en dal telt als één meter), met de hele geschiedenis, foto's, tarieven, de prognose voor het afrekenjaar, herinneringen, import, export en reservekopieën. Gearchiveerde meters houden hun geschiedenis en tellen niet mee. De eenmalige aankoop <strong>Alles ontgrendelen</strong> voegt onbeperkt meters, meerdere woningen, tussenmeters en virtuele meters toe. Niets wat je hebt ingevoerd of geëxporteerd wordt ooit vergrendeld. Er is geen abonnement en er zijn geen advertenties; de App Store toont de prijs in je eigen valuta voordat je koopt.</p>
+</div>
+<div class="card">
+<h3>Hoe importeer ik mijn oude meterstanden?</h3>
+<p>Tik in de tab Importeer op <strong>Importeer een CSV- of Excel-bestand</strong> en kies een spreadsheet met per regel een datum en een meterstand (en de meter, als het bestand er meerdere bevat). Meterbook herkent de kolommen en de datumnotatie, toont een voorvertoning met het aantal meters en meterstanden en importeert elke regel. De gratis versie breekt een import nooit af: brengt het bestand meer dan drie meters mee, dan komen ze allemaal binnen en kun je er een paar archiveren of ontgrendelen.</p>
+</div>
+<div class="card">
+<h3>Waar staan mijn reservekopieën?</h3>
+<p>Meterbook maakt een reservekopie op je iPhone op elke dag dat je een meterstand bewaart, en vóór een import, een herstel of het verwijderen van een meter; de laatste tien automatische versies worden bewaard. Tik in Meer › Reservekopieën op <strong>Maak nu reservekopie</strong> voor een eigen versie, die nooit automatisch wordt verwijderd. Met <strong>Deel reservekopiebestand</strong> bewaar je een versie in Bestanden, op een computer of op een ander apparaat.</p>
+</div>
+<div class="card">
+<h3>Hoe herstel ik een reservekopie?</h3>
+<p>Kies een versie in Meer › Reservekopieën en tik op <strong>Herstel</strong>, of open een reservekopiebestand via tab Importeer › <strong>Herstel een reservekopie van Meterbook</strong>. Je ziet eerst een voorvertoning van wat er wordt toegevoegd. Herstellen voegt altijd samen met je gegevens: er wordt niets verwijderd of overschreven, en vóór het samenvoegen wordt automatisch een reservekopie van je gegevens gemaakt.</p>
+</div>
+<div class="card">
+<h3>Hoe herstel ik mijn aankoop op een nieuwe iPhone?</h3>
+<p>Log in met het Apple Account waarmee je de ontgrendeling hebt gekocht en tik op <strong>Herstel aankopen</strong> in Meer › Aankoop of op het ontgrendelscherm. De aankoop hoort bij je Apple Account, dus hij werkt op elke iPhone die je ermee gebruikt.</p>
+</div>
+<div class="card">
+<h3>Hoe exporteer ik mijn meterstanden?</h3>
+<p>Op het scherm van een meter deelt het menu <strong>Exporteer</strong> de meterstanden als CSV-bestand, als pdf-rapport met de prognose en de berekening, of de laatste meterstand als tekst. Tab Importeer › Exporteer geeft één CSV-bestand met alle meters en het overdrachtsformulier voor een verhuizing. CSV opent in Numbers, Excel en Google Sheets; de pdf's zijn in de taal van de app.</p>
+</div>
+<div class="card">
+<h3>Waarom klopt de prognose niet met mijn rekening?</h3>
+<p>De prognose verdeelt je meterstanden over het afrekenjaar dat begint op de peildatum van je leverancier en telt de vaste leveringskosten en de termijnbedragen van je tarief mee. Met weinig meterstanden rust ze vooral op een schatting, en de bandbreedte laat zien hoeveel ze nog kan verschuiven. <strong>Toon berekening</strong> toont elke stap en de periode achter elk getal, zodat je regel voor regel kunt vergelijken met je rekening.</p>
+</div>
+<div class="card">
+<h3>Hoe wis ik mijn gegevens?</h3>
+<p>Verwijder een meterstand op het scherm van de meter en een meter in de editor (Wijzig › <strong>Verwijder meter</strong>), of gebruik Meer › <strong>Wis alle gegevens</strong> om alle meters, meterstanden en foto's in één keer te verwijderen (eerst wordt een reservekopie gemaakt, en de reservekopieën blijven staan tot je ze verwijdert in Meer › Reservekopieën). Als je de app verwijdert, worden alle gegevens van de app, inclusief reservekopieën, van je iPhone gewist. Wij hebben geen kopie, want er wordt nooit iets naar ons verstuurd.</p>
+</div>
+<div class="card">
+<h3>Welke apparaten en talen worden ondersteund?</h3>
+<p>Meterbook werkt op iPhone met iOS 18 of nieuwer, in het Engels, Duits, Frans, Spaans, Italiaans, Braziliaans-Portugees, Nederlands, Pools en Russisch. De app werkt volledig offline.</p>
+</div>
+</section>
+</main>
+<footer class="wrap">
+    <nav><a href="./">Support</a> <a href="../privacy/">Privacybeleid</a> <a href="../terms/">Gebruiksvoorwaarden</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Alle rechten voorbehouden.</p>
+</footer>
+</body>
+</html>

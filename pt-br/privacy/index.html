@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Política de Privacidade · Meterbook</title>
+    <meta name="description" content="O Meterbook não coleta dados: sem conta, sem servidor, sem análise, sem rastreamento. Suas leituras e as fotos dos medidores ficam no seu iPhone.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/pt-br/privacy/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/privacy/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/privacy/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/privacy/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/privacy/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/privacy/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/privacy/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/privacy/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/privacy/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/privacy/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/privacy/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Idioma">Português (Brasil)</summary>
+        <ul>
+            <li><a href="../../privacy/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/privacy/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../../fr/privacy/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../../es/privacy/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/privacy/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="./" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português (Brasil)</a></li>
+            <li><a href="../../nl/privacy/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="../../pl/privacy/" hreflang="pl" lang="pl">Polski</a></li>
+            <li><a href="../../ru/privacy/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<article class="card">
+<h1>Política de Privacidade</h1>
+<p class="date">Data de vigência: 9 de novembro de 2026</p>
+<div class="summary"><p><strong>Resumo:</strong> O Meterbook não coleta dados. Não há conta, nenhum servidor nosso, nenhuma análise, publicidade ou rastreamento. Suas leituras e as fotos dos medidores ficam no seu iPhone, a câmera é usada só para a foto do medidor, e os arquivos que você exporta vão só para onde você os envia.</p></div>
+<section>
+<h2>1. Quem somos</h2>
+<p>O Meterbook é um app para iPhone oferecido por MacLaren's Studio (“nós”).</p>
+</section>
+<section>
+<h2>2. Dados que não coletamos</h2>
+<p>Não coletamos, recebemos nem armazenamos nenhum dado pessoal por meio do app. O Meterbook não tem login nem conta, não mantemos nenhum servidor para ele, e ele não contém análise, relatórios de falhas, publicidade nem outros SDKs de terceiros. O app não rastreia você em outros apps ou sites, não usa o identificador de publicidade e nunca pede permissão de rastreamento.</p>
+</section>
+<section>
+<h2>3. Suas leituras</h2>
+<p>Tudo o que você insere (medidores, números dos medidores, leituras, notas, tarifas e imóveis) fica armazenado apenas no seu iPhone, no armazenamento próprio do app. Alguns ajustes, como o seu dia da leitura e o horário do lembrete, ficam nas preferências do app no aparelho. Não podemos ver, ler nem recuperar nada disso.</p>
+<p>Como outros dados de apps, suas leituras e fotos são incluídas nos backups do seu iPhone se você usa o Backup do iCloud ou faz backup no computador. Esses backups pertencem à sua Conta Apple ou ao seu computador, e não temos acesso a eles. O Meterbook não sincroniza seus dados entre aparelhos.</p>
+</section>
+<section>
+<h2>4. Câmera e fotos</h2>
+<p>A câmera é usada só quando você tira uma foto do medidor para uma leitura, e isso é opcional: uma leitura pode ser salva sem foto. As fotos ficam armazenadas com as suas leituras no seu iPhone e nunca são enviadas para lugar nenhum. Quando você escolhe uma imagem da sua fototeca, o seletor do sistema passa ao app só aquela imagem. Uma foto do medidor só vai para a sua fototeca quando você a salva lá por conta própria.</p>
+</section>
+<section>
+<h2>5. Lembretes e widget</h2>
+<p>Os lembretes no seu dia da leitura são notificações locais agendadas no seu iPhone; o app pede permissão só quando você os ativa, e nada passa por um servidor. O widget Próxima leitura lê as datas e as últimas leituras de um arquivo que o app mantém em uma pasta compartilhada no seu iPhone; esse arquivo nunca sai do aparelho.</p>
+</section>
+<section>
+<h2>6. Backups e exportações</h2>
+<p>Os backups que o Meterbook faz são arquivos no seu iPhone. Quando você compartilha um arquivo de backup ou exporta um arquivo CSV, um PDF ou uma leitura como texto, o arquivo é criado no seu iPhone e vai só para onde você o envia pelo menu Compartilhar (Mail, Mensagens, Arquivos, AirDrop ou outro app). Essa transferência é feita pela Apple ou pelo app que você escolher, não por nós.</p>
+</section>
+<section>
+<h2>7. Compras</h2>
+<p>O Desbloqueio completo opcional é comprado pela App Store. A Apple processa o pagamento; nunca vemos seu nome, sua Conta Apple nem seus dados de pagamento. O app pergunta à App Store apenas se o desbloqueio foi comprado na sua Conta Apple. O tratamento desses dados pela Apple está descrito na <a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>.</p>
+</section>
+<section>
+<h2>8. Avaliações</h2>
+<p>De vez em quando, o app pode mostrar o pedido de avaliação padrão da Apple. Se e como você avalia é tratado inteiramente pela Apple; o app guarda no seu iPhone apenas quantas leituras você salvou e quando foi a última vez que pediu.</p>
+</section>
+<section>
+<h2>9. E-mails ao suporte</h2>
+<p>Se você nos escrever, recebemos seu endereço de e-mail e o que você enviar, incluindo a versão do app, a versão do iOS e o aparelho que o e-mail de suporte do app adiciona. Usamos essas informações só para responder a você, não as compartilhamos e as apagamos quando não forem mais necessárias para o seu pedido. A base legal é o art. 6º, nº 1, alíneas b e f, do RGPD.</p>
+</section>
+<section>
+<h2>10. Exclusão dos seus dados</h2>
+<p>Você pode apagar leituras e medidores individuais, todos os medidores com Mais › Apagar todos os dados e versões de backup em Mais › Backups. Apagar o app remove do seu iPhone todos os dados dele. Como não temos nenhum dado sobre você, não há nada para exportarmos ou apagarmos a pedido, além dos e-mails que você nos enviou.</p>
+</section>
+<section>
+<h2>11. Crianças</h2>
+<p>O Meterbook é adequado para todas as idades e não coleta dados de ninguém, incluindo crianças.</p>
+</section>
+<section>
+<h2>12. Seus direitos</h2>
+<p>Pelo RGPD e por leis semelhantes, você tem o direito de acessar, corrigir e apagar dados pessoais sobre você e de apresentar uma reclamação a uma autoridade de proteção de dados. Como o app não coleta dados, esses direitos dizem respeito apenas aos e-mails que você nos enviou; escreva para <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>.</p>
+</section>
+<section>
+<h2>13. Alterações</h2>
+<p>Se esta política mudar, a nova versão será publicada nesta página com uma nova data de vigência. Se o app algum dia passar a coletar dados, a política dirá isso antes do lançamento dessa versão.</p>
+</section>
+<section>
+<h2>14. Contato</h2>
+<p>Se você tiver dúvidas sobre esta Política de Privacidade, escreva para <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>.</p>
+</section>
+</article>
+</main>
+<footer class="wrap">
+    <nav><a href="../support/">Suporte</a> <a href="./">Política de Privacidade</a> <a href="../terms/">Termos de Uso</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

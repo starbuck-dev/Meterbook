@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wsparcie Meterbook · Meterbook</title>
+    <meta name="description" content="Odpowiedzi na temat liczników i odczytów, wersji bezpłatnej, importu, kopii zapasowych i przywracania, jednorazowego odblokowania, przywracania zakupu, eksportu i usuwania danych.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="en" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <link rel="alternate" hreflang="de" href="https://starbuck-dev.github.io/Meterbook/de/support/">
+    <link rel="alternate" hreflang="fr" href="https://starbuck-dev.github.io/Meterbook/fr/support/">
+    <link rel="alternate" hreflang="es" href="https://starbuck-dev.github.io/Meterbook/es/support/">
+    <link rel="alternate" hreflang="it" href="https://starbuck-dev.github.io/Meterbook/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://starbuck-dev.github.io/Meterbook/pt-br/support/">
+    <link rel="alternate" hreflang="nl" href="https://starbuck-dev.github.io/Meterbook/nl/support/">
+    <link rel="alternate" hreflang="pl" href="https://starbuck-dev.github.io/Meterbook/pl/support/">
+    <link rel="alternate" hreflang="ru" href="https://starbuck-dev.github.io/Meterbook/ru/support/">
+    <link rel="alternate" hreflang="x-default" href="https://starbuck-dev.github.io/Meterbook/support/">
+    <style>
+:root {
+    color-scheme: light dark;
+    --bg: #F2F2F0; --surface: #FFFFFF; --separator: #E1E2E0; --text: #1C1F23; --text-2: #5E636B;
+    --accent: #2B5C8A; --accent-soft: rgba(43, 92, 138, 0.08); --on-accent: #FFFFFF; --todo: #FDE68A;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #141517; --surface: #1E2023; --separator: #2C2F33; --text: #ECEDEF; --text-2: #9A9FA6;
+        --accent: #8FB4DA; --accent-soft: rgba(143, 180, 218, 0.12); --on-accent: #0F1A26; --todo: #854D0E;
+    }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 16px 12px; }
+.brand { color: var(--text); font-weight: 700; font-size: 20px; text-decoration: none; }
+.lang { position: relative; font-size: 15px; }
+.lang summary {
+    list-style: none; cursor: pointer; padding: 6px 14px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface); color: var(--text); border: 1px solid var(--separator);
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; color: var(--text-2); }
+.lang ul {
+    position: absolute; right: 0; z-index: 2; margin: 8px 0 0; padding: 6px; list-style: none; min-width: 190px;
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+.lang li a { display: block; padding: 7px 12px; border-radius: 9px; color: var(--text); text-decoration: none; }
+.lang li a:hover, .lang li a:focus-visible { background: var(--accent-soft); }
+.lang li a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.card {
+    background: var(--surface); border: 1px solid var(--separator); border-radius: 20px;
+    padding: 24px; margin: 16px 0;
+}
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 28px 0 8px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+p, li { color: var(--text-2); }
+.date { font-size: 14px; color: var(--text-2); margin: 0 0 20px; }
+.summary { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+.lead { font-size: 18px; color: var(--text-2); }
+.button {
+    display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600;
+    padding: 12px 28px; border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.links { display: grid; gap: 12px; margin: 16px 0; }
+.links a {
+    display: block; background: var(--surface); border: 1px solid var(--separator); border-radius: 16px;
+    padding: 16px 20px; text-decoration: none;
+}
+.links strong { display: block; color: var(--text); }
+.links span { color: var(--text-2); font-size: 15px; }
+mark.todo { background: var(--todo); color: var(--text); padding: 0 4px; border-radius: 4px; }
+footer { padding: 16px 16px 40px; font-size: 14px; color: var(--text-2); }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<header class="wrap top">
+    <a class="brand" href="../">Meterbook</a>
+    <details class="lang">
+        <summary aria-label="Język">Polski</summary>
+        <ul>
+            <li><a href="../../support/" hreflang="en" lang="en">English</a></li>
+            <li><a href="../../de/support/" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../../fr/support/" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../../es/support/" hreflang="es" lang="es">Español</a></li>
+            <li><a href="../../it/support/" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../../pt-br/support/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li>
+            <li><a href="../../nl/support/" hreflang="nl" lang="nl">Nederlands</a></li>
+            <li><a href="./" hreflang="pl" lang="pl" aria-current="page">Polski</a></li>
+            <li><a href="../../ru/support/" hreflang="ru" lang="ru">Русский</a></li>
+        </ul>
+    </details>
+</header>
+<main class="wrap">
+<section class="card">
+<h1>Wsparcie Meterbook</h1>
+<p class="lead">Twoje odczyty liczników: zdjęcie, liczba i data na jednej karcie.</p>
+<p><strong>Potrzebujesz pomocy?</strong> Napisz na <a href="mailto:ssx51f@gmail.com">ssx51f@gmail.com</a>. MacLaren's Studio zwykle odpowiada w ciągu dwóch dni roboczych. Wskazówka: opcja Więcej › Kontakt z pomocą w aplikacji dodaje do wiadomości wersję aplikacji, wersję iOS i model urządzenia.</p>
+<a class="button" href="mailto:ssx51f@gmail.com?subject=Wsparcie%20Meterbook">Napisz do wsparcia</a>
+</section>
+<section>
+<h2>Najczęściej zadawane pytania</h2>
+<div class="card">
+<h3>Jak dodać licznik i odczyt?</h3>
+<p>Na karcie Liczniki stuknij <strong>Dodaj licznik</strong>, nadaj mu nazwę i typ (prąd, gaz, woda lub ciepło) i zachowaj. Otwórz licznik i stuknij <strong>Wpisz odczyt</strong>: ostatni odczyt jest widoczny nad polem wpisu, więc wpisujesz tylko cyfry, które się zmieniły. Jeśli chcesz, dodaj zdjęcie licznika jako dowód. Wartość niższa od ostatniego odczytu jest blokowana; jeśli licznik został wymieniony, wybierz zamiast tego opcję <strong>Wymiana licznika</strong>.</p>
+</div>
+<div class="card">
+<h3>Co jest bezpłatne, a co dodaje odblokowanie?</h3>
+<p>Bezpłatnie, na zawsze: do trzech aktywnych liczników, każdy z dowolną liczbą rejestrów (licznik dwukierunkowy lub dwutaryfowy liczy się jako jeden licznik), z całą historią, zdjęciami, taryfami, prognozą roku rozliczeniowego, przypomnieniami, importem, eksportem i kopiami zapasowymi. Zarchiwizowane liczniki zachowują swoją historię i nie są wliczane. Jednorazowe <strong>Pełne odblokowanie</strong> dodaje nieograniczoną liczbę liczników, kilka nieruchomości, podliczniki i liczniki wirtualne. Nic, co zostało wpisane lub wyeksportowane, nigdy nie jest blokowane. Nie ma subskrypcji ani reklam; App Store pokazuje cenę w Twojej walucie przed zakupem.</p>
+</div>
+<div class="card">
+<h3>Jak zaimportować stare odczyty?</h3>
+<p>Na karcie Import stuknij <strong>Importuj plik CSV lub Excel</strong> i wybierz arkusz z datą i odczytem w każdym wierszu (oraz licznikiem, jeśli plik zawiera kilka liczników). Meterbook rozpoznaje kolumny i format daty, pokazuje podgląd z liczbą liczników i odczytów i importuje każdy wiersz. Wersja bezpłatna nigdy nie skraca importu: jeśli plik zawiera więcej niż trzy liczniki, trafiają do aplikacji wszystkie, a potem możesz część z nich zarchiwizować albo odblokować aplikację.</p>
+</div>
+<div class="card">
+<h3>Gdzie są moje kopie zapasowe?</h3>
+<p>Meterbook tworzy kopię zapasową na Twoim iPhonie każdego dnia, w którym zapisujesz odczyt, a także przed importem, przywracaniem lub usunięciem licznika; przechowywanych jest dziesięć ostatnich wersji automatycznych. Stuknij <strong>Utwórz kopię</strong> w Więcej › Kopie zapasowe, aby utworzyć własną wersję, która nigdy nie jest usuwana automatycznie. <strong>Udostępnij plik kopii</strong> zapisuje wersję w aplikacji Pliki, na komputerze lub na innym urządzeniu.</p>
+</div>
+<div class="card">
+<h3>Jak przywrócić kopię zapasową?</h3>
+<p>Wybierz wersję w Więcej › Kopie zapasowe i stuknij <strong>Przywróć</strong> albo otwórz plik kopii przez kartę Import › <strong>Przywróć kopię zapasową Meterbook</strong>. Najpierw zobaczysz podgląd tego, co zostanie dodane. Przywracanie zawsze scala kopię z Twoimi danymi: nic nie jest usuwane ani nadpisywane, a przed scaleniem Twoje dane są automatycznie zapisywane w kopii zapasowej.</p>
+</div>
+<div class="card">
+<h3>Jak przywrócić zakup na nowym iPhonie?</h3>
+<p>Zaloguj się na konto Apple, na którym kupiono odblokowanie, a następnie stuknij <strong>Przywróć zakupy</strong> w Więcej › Zakup lub na ekranie odblokowania. Zakup należy do Twojego konta Apple, więc działa na każdym iPhonie, na którym go używasz.</p>
+</div>
+<div class="card">
+<h3>Jak wyeksportować odczyty?</h3>
+<p>Na ekranie licznika menu <strong>Eksport</strong> udostępnia jego odczyty jako plik CSV, raport PDF z prognozą i jej obliczeniami albo ostatni odczyt jako tekst. Karta Import › Eksport tworzy jeden plik CSV ze wszystkimi licznikami oraz protokół zdawczo-odbiorczy przy wprowadzce lub wyprowadzce. Plik CSV otworzysz w programach Numbers, Excel i Google Sheets; pliki PDF są w języku aplikacji.</p>
+</div>
+<div class="card">
+<h3>Dlaczego prognoza nie zgadza się z moim rachunkiem?</h3>
+<p>Prognoza rozkłada Twoje odczyty na rok rozliczeniowy, który zaczyna się od daty rozliczenia Twojego dostawcy, i dodaje opłatę stałą oraz miesięczne zaliczki z Twojej taryfy. Przy niewielu odczytach opiera się głównie na szacunku, a przedział pokazuje, jak bardzo może się jeszcze zmienić. <strong>Pokaż obliczenia</strong> wymienia każdy krok i okres stojący za każdą liczbą, więc możesz porównać je z rachunkiem wiersz po wierszu.</p>
+</div>
+<div class="card">
+<h3>Jak usunąć moje dane?</h3>
+<p>Odczyt usuniesz na ekranie jego licznika, a licznik w jego edytorze (Edytuj › <strong>Usuń licznik</strong>). Możesz też użyć opcji Więcej › <strong>Usuń wszystkie dane</strong>, aby usunąć naraz wszystkie liczniki, odczyty i zdjęcia (najpierw tworzona jest kopia zapasowa, a kopie zapasowe zostają, dopóki nie usuniesz ich w Więcej › Kopie zapasowe). Usunięcie aplikacji usuwa z Twojego iPhone'a wszystkie jej dane, łącznie z kopiami zapasowymi. Nie mamy żadnej kopii, ponieważ nic nigdy nie jest do nas wysyłane.</p>
+</div>
+<div class="card">
+<h3>Jakie urządzenia i języki są obsługiwane?</h3>
+<p>Meterbook działa na iPhonie z iOS 18 lub nowszym, w języku angielskim, niemieckim, francuskim, hiszpańskim, włoskim, portugalskim (Brazylia), niderlandzkim, polskim i rosyjskim. Działa w pełni offline.</p>
+</div>
+</section>
+</main>
+<footer class="wrap">
+    <nav><a href="./">Wsparcie</a> <a href="../privacy/">Polityka prywatności</a> <a href="../terms/">Warunki użytkowania</a></nav>
+    <p>&copy; 2026 MacLaren's Studio. Wszelkie prawa zastrzeżone.</p>
+</footer>
+</body>
+</html>
